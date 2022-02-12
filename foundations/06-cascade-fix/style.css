@@ -3,19 +3,15 @@
   color: hsl(0, 100%, 50%);
 }
 
-.small-para {
-  font-size: 14px;
-}
-
 .para {
   font-size: 22px;
 }
 
-.confirm {
-  background: green;
-  color: white;
-  font-weight: bold;
-} 
+.small-para {
+  font-size: 14px;
+}
+
+/* re-ordered the para and small-para declarations so that para would take precident over small-para fixing the size selection */
 
 .button {
   background-color: rgb(255, 255, 255);
@@ -23,12 +19,22 @@
   font-size: 20px;
 }
 
-.child {
-  color: red;
-  font-size: 14px;
+.confirm {
+  background: green;
+  color: white;
+  font-weight: bold;
 }
+
+/* re-ordered the declaration for the confirm class so that the button class doesn't over-write it */
 
 div.text {
   color: green;
   font-size: 22px;
 }
+
+div.text.child {
+  color: red;
+  font-size: 14px;
+}
+
+/* re-ordered the child class declaration and chained it to the div type and text class for more specific definition */
